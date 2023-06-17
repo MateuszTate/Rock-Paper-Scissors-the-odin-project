@@ -25,35 +25,45 @@ let round = function(playerSelection,computerSelection){
 
     if(playerSelection==='rock' && computerSelection==='paper'){
         currentLoses++;
+        console.log('You Lose');
     }
     else if(playerSelection==='rock' && computerSelection==='scissors'){
         currentWins++;
+        console.log('You Won');
     }
     else if(playerSelection==='rock' && computerSelection==='rock'){
         currentDraws++;
+        console.log('Draw');
     }
 
 
     else if(playerSelection==='paper' && computerSelection==='rock'){
         currentWins++;
+        console.log('You Won');
     }
     else if(playerSelection==='paper' && computerSelection==='scissors'){
         currentLoses++;
+        console.log('You Lose');
     }
     else if(playerSelection==='paper' && computerSelection==='paper'){
         currentDraws++;
+        console.log('Draw');
     }
+
 
     else if(playerSelection==='scissors' && computerSelection==='rock'){
         currentLoses++;
+        console.log('You Lose');
         
     }
     else if(playerSelection==='scissors' && computerSelection==='scissors'){
         currentDraws++;
+        console.log('Draw');
         
     }
     else if(playerSelection==='scissors' && computerSelection==='paper'){
         currentWins++;
+        console.log('You Won');
         
     }
 
@@ -71,6 +81,8 @@ let round = function(playerSelection,computerSelection){
 
 document.getElementById('buttonRock').onclick = function() {
     let playerSelection = document.getElementById("buttonRock").value;
+    console.log(playerSelection);
+    console.log(computerSelection);
     // console.log(round(playerSelection, computerSelection));
     round(playerSelection, computerSelection)
     computerSelection = getComputerChoice();
@@ -78,6 +90,8 @@ document.getElementById('buttonRock').onclick = function() {
 
  document.getElementById('buttonPaper').onclick = function() {
     let playerSelection = document.getElementById("buttonPaper").value;
+    console.log(playerSelection);
+    console.log(computerSelection);
     // console.log(round(playerSelection, computerSelection));
     round(playerSelection, computerSelection)
     computerSelection = getComputerChoice();
@@ -86,6 +100,8 @@ document.getElementById('buttonRock').onclick = function() {
 
  document.getElementById('buttonScissors').onclick = function() {
     let playerSelection = document.getElementById("buttonScissors").value;
+    console.log(playerSelection);
+    console.log(computerSelection   );
     // console.log(round(playerSelection, computerSelection));
     round(playerSelection, computerSelection)
     computerSelection = getComputerChoice();
