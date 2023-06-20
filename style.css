@@ -1,3 +1,8 @@
+
+html, body {
+    height: 100%;
+  }
+
 *{
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
@@ -7,6 +12,8 @@ body{
     padding: 0;
     margin: 0;
     background: rgb(93, 0, 255);
+    display: flex;
+  flex-direction: column;
 }
 
 .container{
@@ -14,16 +21,18 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
-span{
+.container2 span{
     display: flex;
     justify-content: center;
     margin: 20px;
 }
 
 button{
-    width: 80%;
+    font-size: 16px;
+    width: 150px;
     border: none;
     background-color: white;
     padding: 5px 20px 5px 20px;
@@ -84,11 +93,8 @@ button:hover{
     justify-content: center;
     align-items: center;
     background-color: rgb(64, 0, 175);
-    position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-
+    width: 100%;
+    margin-top: 18.2%;
 }
 
 .footer > a{
@@ -104,4 +110,43 @@ button:hover{
 }
   
 
+.container3{
+    /* width: 50%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
+span.howManyWins{
+    font-size: 24px;
+    border: none;
+    background-color: white;
+    padding: 5px 20px 5px 20px;
+    margin-top: 70px;
+    border-radius: 10px;
+    border: 2px solid rgb(0, 0, 0);
+    font-weight: 700;
+    color: black;
+}
+
+span.percentOfWins{
+    display: none;
+    font-size: 24px;
+    border: none;
+    background-color: white;
+    padding: 5px 20px 5px 20px;
+    margin-top: 70px;
+    border-radius: 10px;
+    border: 2px solid rgb(0, 0, 0);
+    font-weight: 700;
+    color: black;
+}
+
+
+.content {
+    flex: 1 0 auto;
+  }
+  .footer {
+    flex-shrink: 0;
+  }

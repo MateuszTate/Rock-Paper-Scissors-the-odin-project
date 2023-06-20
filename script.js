@@ -12,12 +12,16 @@ let getComputerChoice = function(){
 
 let computerSelection = getComputerChoice();
 
+const howManyWins = document.querySelector('.howManyWins');
+const percentOfWins = document.querySelector('.percentOfWins');
+
 let round = function(playerSelection,computerSelection){
     
 
     const wins = document.querySelector('.wins');
     const loses = document.querySelector('.loses');
     const draws = document.querySelector('.draws');
+    
 
     
 
@@ -70,6 +74,19 @@ let round = function(playerSelection,computerSelection){
     wins.textContent = 'Wins: '+currentWins;
     loses.textContent = 'Loses: '+currentLoses;
     draws.textContent = 'Draws: '+currentDraws;
+
+    howManyWins.textContent = 'You won ' + currentWins + '. ' + 'Enemy won ' + currentLoses +'.';
+    let percent = currentWins/(currentWins+currentLoses);
+    if(currentLoses>0 && currentWins===0){
+        percent = 0;
+    }
+    if(currentLoses>0 || currentWins>0){
+        percentOfWins.textContent = 'It is equal to '+(Math.round(percent * 100)) + '%';
+        percentOfWins.style.display = 'block';
+        
+    }
+    
+
     
 
     
@@ -106,6 +123,8 @@ document.getElementById('buttonRock').onclick = function() {
     round(playerSelection, computerSelection)
     computerSelection = getComputerChoice();
 };
+
+
 
 
 
